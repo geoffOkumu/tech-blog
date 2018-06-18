@@ -16,9 +16,10 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Description", name: "description", widget: "text", required: false}
       - {label: "Category", name: "category", widget: "string"}
       - {label: "Author", name: "author", widget: "string"}
+      - {label: "Add to featured", name: "featured", widget: "boolean", default: false}
       - {label: "Body", name: "body", widget: "markdown"}
   
   - label: "Pages"
@@ -31,10 +32,10 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Tagline", name: "tagline", widget: "string"}
-          - {label: "Facebook", name: "facebook", widget: "string"}
-          - {label: "Twitter", name: "twitter", widget: "string"}
-          - {label: "Linkedin", name: "linkedin", widget: "string"}
-          - {label: "Instagram", name: "facebook", widget: "string"}
+          - {label: "Facebook", name: "facebook", widget: "string", required: false}
+          - {label: "Twitter", name: "twitter", widget: "string", required: false}
+          - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
+          - {label: "Instagram", name: "facebook", widget: "string", required: false}
           - {label: "Email", name: "email", widget: "string"}
           - {label: "Phone", name: "phone", widget: "string"}
           - {label: "Image", name: "image", widget: "image"}
@@ -66,6 +67,6 @@ collections:
             fields:
               - {label: "Names", name: "names", widget: "string"}
               - {label: "Bio", name: "bio", widget: "string"}
-              - {label: "Twitter", name: "twitter", widget: "string"}
-              - {label: "Linkedin", name: "linkedin", widget: "string"}
+              - {label: "Twitter", name: "twitter", widget: "string", required: false}
+              - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
               - {label: "Image", name: "image", widget: "image"}
