@@ -2,7 +2,7 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   siteMetadata: {
-    title: 'Tech Blog',
+    title: 'TechGenius',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
