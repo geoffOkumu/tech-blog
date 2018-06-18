@@ -12,5 +12,19 @@ module.exports = {
         postCssPlugins: [autoprefixer()],
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/content`,
+        name: 'pages',
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [],
+      },
+    },
+    'gatsby-plugin-netlify-cms',
   ],
 }

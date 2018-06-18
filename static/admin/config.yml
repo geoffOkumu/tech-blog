@@ -17,5 +17,55 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Category", name: "category", widget: "string"}
+      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
+  
+  - label: "Pages"
+    name: "pages"
+    files: 
+      - label: "About Page"
+        name: "about"
+        file: "src/content/pages/about.md"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Tagline", name: "tagline", widget: "string"}
+          - {label: "Facebook", name: "facebook", widget: "string"}
+          - {label: "Twitter", name: "twitter", widget: "string"}
+          - {label: "Linkedin", name: "linkedin", widget: "string"}
+          - {label: "Instagram", name: "facebook", widget: "string"}
+          - {label: "Email", name: "email", widget: "string"}
+          - {label: "Phone", name: "phone", widget: "string"}
+          - {label: "Image", name: "image", widget: "image"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Categories Page"
+        name: "categories"
+        file: "src/content/pages/categories.md"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "categories"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Tagline", name: "tagline", widget: "string"}
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}
+      - label: "Authors"
+        name: "authors"
+        file: "src/content/pages/authors.md"
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "authors"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Tagline", name: "tagline", widget: "string"}
+          - label: "Authors"
+            name: "authors"
+            widget: "list"
+            fields:
+              - {label: "Names", name: "names", widget: "string"}
+              - {label: "Bio", name: "bio", widget: "string"}
+              - {label: "Twitter", name: "twitter", widget: "string"}
+              - {label: "Linkedin", name: "linkedin", widget: "string"}
+              - {label: "Image", name: "image", widget: "image"}

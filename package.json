@@ -9,9 +9,13 @@
     "enquire.js": "^2.1.6",
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
+    "gatsby-plugin-netlify-cms": "^2.0.1",
     "gatsby-plugin-postcss-sass": "^1.0.22",
     "gatsby-plugin-react-helmet": "^2.0.10",
+    "gatsby-source-filesystem": "^1.5.39",
+    "gatsby-transformer-remark": "^1.7.44",
     "mappy-breakpoints": "^0.2.3",
+    "netlify-cms": "^1.9.2",
     "react-helmet": "^5.2.0"
   },
   "keywords": [
