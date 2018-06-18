@@ -16,7 +16,7 @@
 }
 
 .header-logo__img {
-    height: 30px;
+    height: 40px;
 }
 
 .header-nav {
@@ -30,5 +30,31 @@
 
     li {
         margin: 0 1.4rem;
+        display: inline-block;
+        position: relative;
+        color: $primary;
     }
+
+    li::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #0087ca;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    li:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+.social-icons {
+    width: 1.6rem;
+    margin-left: .8rem;
 }

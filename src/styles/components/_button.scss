@@ -31,3 +31,96 @@
         box-shadow: none;
     }
 }
+
+// Variables
+// ---------
+
+$_button-primary-color: $white;
+$_button-primary-color-hover: $white;
+$_button-primary-bg:  $primary;
+$_button-primary-bg-hover: $primary-high;
+$_button-primary-border: $primary;
+$_button-primary-border-hover:  $primary-high;
+
+$_button-secondary-color: $white;
+$_button-secondary-color-hover: $white;
+$_button-secondary-bg: #1a1a1a;
+$_button-secondary-bg-hover:  $primary-low;
+
+/**
+Main Buttons
+Copied from buttons mixin. You can create a new button like so:
+.button--modifier {
+  @include button-variant($color, color-hover, background, $background-hover, $border, $border-hover)
+}
+Note that $background-hover, $border, & $border-hover are optional
+Takes a few variables and creates a new button style
+@param {color}: color of button text
+@param {color-hover} color of button text on hover
+@param {background}: color of button background
+@param {background-hover} color of button on hover
+@param {border} color of button border (defaults to background color)
+@param {border-hover} color of border on hover (defaults to hover bg color)
+*/
+
+// Button Variations
+// ------------------
+
+.btn-primary {
+    @include button-variant(
+        $_button-primary-color,
+        $_button-primary-color-hover,
+        $_button-primary-bg,
+        $_button-primary-bg-hover,
+        $_button-primary-border,
+        $_button-primary-border-hover
+    );
+}
+  
+.btn-secondary {
+    @include button-variant(
+        $_button-secondary-color,
+        $_button-secondary-color-hover,
+        $_button-secondary-bg,
+        $_button-secondary-bg-hover
+    );
+}
+
+/**
+Outline Buttons
+Takes a few variables and creates a new button style
+Copied from buttons mixin. You can create a new button like so:
+.button-outline--modifier {
+  @include($color, $border, $background-hover, $color-hover, $border-hover)
+}
+only first param is required
+@param {color}: color of button text
+@param {border} color of button outline/border (default: $color)
+@param {background-hover}: color of background on hover (default: $color)
+@param {color-hover} color of text on hover (default: $white)
+@param {border-hover} color of border on hover (default: $background-hover)
+*/
+
+// Outline Button Variations
+// ----------------------
+
+.btn-outline__primary {
+    @include button-outline-variant($_button-primary-bg);
+}
+  
+.btn-outline__secondary {
+    @include button-outline-variant($_button-secondary-bg);
+}
+
+// Button Sizes
+// ------------
+
+.btn-large {
+    @include typesize(1);
+    padding: .75rem 1.25rem;
+}
+  
+.btn-small {
+    @include typesize(-1);
+    padding: .25rem .75rem;
+}
