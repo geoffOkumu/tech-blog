@@ -5,10 +5,13 @@
   "author": "GeoffOkumu",
   "dependencies": {
     "autoprefixer": "^8.6.2",
+    "classnames": "^2.2.6",
+    "enquire.js": "^2.1.6",
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
     "gatsby-plugin-postcss-sass": "^1.0.22",
     "gatsby-plugin-react-helmet": "^2.0.10",
+    "mappy-breakpoints": "^0.2.3",
     "react-helmet": "^5.2.0"
   },
   "keywords": [

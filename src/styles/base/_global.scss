@@ -1,0 +1,19 @@
+//Default styles
+
+// Images
+// ------
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+  
+  
+// Removes Dotted Border
+// ---------------------
+  
+:focus {
+    outline: 0;
+}

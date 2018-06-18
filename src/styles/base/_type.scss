@@ -1,0 +1,178 @@
+//==========
+//Type
+//=====================
+
+
+//global type styles
+html {
+    color: $base-font-color;
+    line-height: $base-line-height;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+}
+
+p {
+    margin-bottom: space(2);
+}
+
+em,
+i {
+    font-style: italic;
+    line-height: inherit;
+}
+
+strong,
+b {
+    font-weight: $base-bold-weight;
+}
+
+small,
+.small {
+    @include typesize(-1);
+}
+
+//Headings 
+//=======================
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $header-font-family;
+    font-weight: $base-bold-weight;
+    line-height: $base-line-height;
+}
+
+h1 {
+    @include typesize(3);
+    margin-bottom: space(2);
+    line-height: $leading * 2;
+}
+
+h2 {
+    @include typesize(2);
+    margin-bottom: space(2);
+    line-height: 2rem;
+    padding-bottom: space(5);
+    margin-bottom: space(5);
+}
+
+h3 {
+    @include typesize(1);
+    margin-bottom: space(1);
+    line-height: $leading;
+}
+
+h4 {
+    @include typesize(0);
+    margin-bottom: space(2);
+    line-height: $leading;
+}
+
+h5 {
+    @include typesize(-1);
+    margin-bottom: space(1);
+    line-height: $leading;
+}
+
+//Links
+//=======================
+
+a {
+    color: $base-link-color;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color $base-time $base-ease;
+  
+    &:hover,
+    &:focus {
+      color: $base-link-hover;
+    }
+  
+    img {
+      border: 0;
+    }
+  
+}
+
+// Horizontal Rule
+// ---------------
+
+hr {
+    height: 1px;
+    background-color: $opacity-black;
+    border: 0;
+    margin: space(2) 0;
+}
+
+// Lists
+// ------
+
+$_list-side-margin: 1.25rem !default;
+$_list-line-height: inherit !default;
+
+ul,
+ol,
+dl {
+  list-style-position: inside;
+  line-height: $_list-line-height;
+  margin-bottom: space(2);
+}
+
+ul,
+ol {
+  list-style-type: disc;
+  margin-left: $_list-side-margin;
+}
+
+ul.list{
+  li {
+    list-style-type: disc;
+    margin-left: space(2);
+  }
+}
+
+ol.list {
+  margin-left: space(4);
+
+  li {
+    list-style-type: number;
+    margin-bottom: space(1);
+  }
+}
+
+p code {
+  background-color: #f3f3f3;
+  padding: 0 2px;
+}
+
+// Blockquotes
+// -----------
+
+blockquote {
+    @include typesize(1);
+    line-height: $base-line-height;
+    margin: 0 0 spacing(1);
+    padding: space(1) space(2);
+    font-weight: 300;
+    border-left: 5px solid $opacity-black;
+}
+  
+dt {
+    float: left;
+    clear: left;
+    width: 100px;
+    text-align: right;
+    font-weight: bold;
+}
+  
+dt::after {
+    content: ":";
+}
+  
+dd {
+    margin: 0 0 0 110px;
+    padding: 0 0 space(1) 0;
+}
+    
