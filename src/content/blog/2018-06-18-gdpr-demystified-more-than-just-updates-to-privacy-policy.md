@@ -1,6 +1,6 @@
 ---
 templateKey: blog
-title: 'GDPR demystified, more than just updates to privacy policy '
+title: 'GDPR demystified, more than just privacy policies'
 date: '2018-06-18T23:18:59+03:00'
 thumbnail: /img/doors-1767562_1280.jpg
 category: News

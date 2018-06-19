@@ -35,8 +35,8 @@ const Header = ({ siteTitle }) => (
           </nav>
         </Col>
       </Row>
+      <Divider style={{margin: 0}} />
     </header>
-    <Divider style={{margin: 0}} />
   </div>
 )
 

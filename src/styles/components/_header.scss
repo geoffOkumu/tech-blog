@@ -1,11 +1,14 @@
 //header styles
 //vars
 
-$_header-height  : 80px;
+$_header-height  : 100px;
 
 .header {
     height: $_header-height;
     width: 100%;
+    position: fixed;
+    background-color: $white;
+    z-index: 1000;
 }
 
 .header-logo {

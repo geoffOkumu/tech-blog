@@ -13,7 +13,7 @@ class Button extends React.Component{
 
         const classes = classNames({
             [`btn-${type}`]: type,
-            [`btn-${variant}__primary`]: variant,
+            [`btn-${variant}__${type}`]: variant && type,
             [`btn-${size}`]: size,
         }, className, 'btn')
         return(

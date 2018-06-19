@@ -1,11 +1,8 @@
 .featured-post__container {
     display: flex;
     padding: 2rem 3rem;
+    margin-top: 100px;
     color: $black;
-
-    @include bp(large){
-        width: 33vw;
-    }
 
     @include bp(max-width small){
         padding: 2rem 1rem 0 1rem;
@@ -32,7 +29,7 @@
 }
 
 .featured-post__text {
-    margin-left: 1rem;
+    padding-left: 1rem;
     width: 70%;
     
     @include bp(large){

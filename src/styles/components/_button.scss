@@ -1,7 +1,7 @@
 .btn {
     @include typesize(0);
     display: inline-block;
-    font-weight: inherit;
+    font-weight: 300;
     border-radius: $base-radius;
     line-height: inherit;
     text-align: center;
@@ -9,7 +9,7 @@
     vertical-align: middle;
     cursor: pointer;
     user-select: none;
-    padding: spacing(.5) spacing(1);
+    padding: spacing(.8) spacing(3);
     border: 2px solid transparent;
     background: $primary;
     transition: all $base-time $base-ease;
@@ -43,8 +43,8 @@ $_button-primary-border: $primary;
 $_button-primary-border-hover:  $primary-high;
 
 $_button-secondary-color: $white;
-$_button-secondary-color-hover: $white;
-$_button-secondary-bg: #1a1a1a;
+$_button-secondary-color-hover: $black;
+$_button-secondary-bg: $opacity-white;
 $_button-secondary-bg-hover:  $primary-low;
 
 /**
