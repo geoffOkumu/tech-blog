@@ -3,7 +3,6 @@ import Link from 'gatsby-link'
 import logo from '../assets/rick.svg'
 import {Row, Col} from '../layout-components/grid'
 import Divider from '../layout-components/divider'
-import SocialIcons from '../components/social-icons'
 
 const Header = ({ siteTitle }) => (
   <div>
@@ -34,9 +33,6 @@ const Header = ({ siteTitle }) => (
               </li>
             </ul>
           </nav>
-        </Col>
-        <Col>
-          <SocialIcons/>
         </Col>
       </Row>
     </header>

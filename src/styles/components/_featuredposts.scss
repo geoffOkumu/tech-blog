@@ -1,0 +1,49 @@
+.featured-post__container {
+    display: flex;
+    padding: 2rem 3rem;
+    color: $black;
+
+    @include bp(large){
+        width: 33vw;
+    }
+
+    @include bp(max-width small){
+        padding: 2rem 1rem 0 1rem;
+    }
+
+    &:hover {
+        opacity: .8;
+    }
+}
+
+.featured-post__img {
+    width: 10rem;
+    height: 80px;
+
+    @include bp(max-width small){
+        width: 30%;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.featured-post__text {
+    margin-left: 1rem;
+    width: 70%;
+    
+    @include bp(large){
+        width: 200px;
+    }
+
+    h4 {
+        font-weight: 300;
+    }
+
+    span {
+        color: $opacity-black;
+    }
+}

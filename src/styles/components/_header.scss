@@ -1,13 +1,17 @@
 //header styles
+//vars
+
+$_header-height  : 80px;
+
 .header {
-    height: 100px;
+    height: $_header-height;
     width: 100%;
 }
 
 .header-logo {
     display: flex;
     align-items: center;
-    height: 100px;
+    height: $_header-height;
 
     span {
         margin-left: .6rem;
@@ -20,19 +24,23 @@
 }
 
 .header-nav {
-    height: 100px;
+    height: $_header-height;
 }
 
 .header-nav__container {
     display: inline-flex;
     align-items: center;
-    height: 100px;
+    height: $_header-height;
+
+    @include bp(max-width small){
+        display: none;
+    }
 
     li {
         margin: 0 1.4rem;
         display: inline-block;
         position: relative;
-        color: $primary;
+        color: $black;
     }
 
     li::after {
@@ -51,6 +59,10 @@
     li:hover::after {
         transform: scaleX(1);
         transform-origin: bottom left;
+    }
+
+    a {
+        color: $black;
     }
 }
 

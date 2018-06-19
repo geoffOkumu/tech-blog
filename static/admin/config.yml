@@ -32,6 +32,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "about"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Tagline", name: "tagline", widget: "string"}
+          - {label: "Update Date", name: "date", widget: "datetime"}
           - {label: "Facebook", name: "facebook", widget: "string", required: false}
           - {label: "Twitter", name: "twitter", widget: "string", required: false}
           - {label: "Linkedin", name: "linkedin", widget: "string", required: false}
@@ -47,6 +48,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "categories"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Tagline", name: "tagline", widget: "string"}
+          - {label: "Update Date", name: "date", widget: "datetime"}
           - label: "Categories"
             name: "categories"
             widget: "list"
@@ -61,6 +63,7 @@ collections:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "authors"}
           - {label: "Title", name: "title", widget: "string"}
           - {label: "Tagline", name: "tagline", widget: "string"}
+          - {label: "Update Date", name: "date", widget: "datetime"}
           - label: "Authors"
             name: "authors"
             widget: "list"
