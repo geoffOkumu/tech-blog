@@ -4,6 +4,10 @@ import FeaturedPosts from '../components/FeaturedPosts';
 import About from '../components/About';
 import TopPosts from '../components/TopPosts';
 import Divider from '../layout-components/divider'
+import { Row, Col } from '../layout-components/grid';
+import AllPosts from '../components/AllPosts';
+import Title from '../components/Title';
+import Whitespace from '../layout-components/whitespace'
 
 const IndexPage = ({data}) =>{
   const allPosts = data.blogposts.edges
@@ -23,12 +27,24 @@ const IndexPage = ({data}) =>{
     <div>
       <div>
         <FeaturedPosts posts={featuredPosts}/>
-        <About data={aboutData} />
       </div>
+      <div style={{backgroundColor: '#fafafa',paddingTop: '2rem'}}>
+        <div className="container">
+          <Title title='Top Posts'/>
+          <TopPosts data={topPosts.slice(0, 3)} />
+        </div>
+      </div>
+      <About data={aboutData} />
       <div className="container">
-        <TopPosts data={topPosts.slice(0, 3)} />
+        <Row>
+          <Col lg={16} xs={24}>
+            <Whitespace height ={16}/>
+            <Title title='All Posts'/>
+            <AllPosts data={allPosts}/>
+          </Col>
+          <Col lg={8} xs={24}></Col>
+        </Row>
       </div>
-      <Divider />
     </div>
   )
 }
@@ -58,23 +74,6 @@ export const query = graphql`
           }
         }
       } 
-    }
-    categories: allMarkdownRemark(
-      filter: {frontmatter: {title: {eq: "Categories"}}}
-    ){
-      edges {
-        node {
-          frontmatter {
-            title
-            tagline
-            categories {
-              title
-              description
-              image
-            }
-          }
-        }
-      }
     }
     featuredPosts: allMarkdownRemark(
       filter: {frontmatter: {featured: {eq: true}}}

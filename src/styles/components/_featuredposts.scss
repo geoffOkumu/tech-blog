@@ -1,7 +1,10 @@
+.featured-posts {
+    padding-top: 100px;
+}
+
 .featured-post__container {
     display: flex;
     padding: 2rem 3rem;
-    margin-top: 100px;
     color: $black;
 
     @include bp(max-width small){
@@ -14,7 +17,7 @@
 }
 
 .featured-post__img {
-    width: 10rem;
+    width: 30%;
     height: 80px;
 
     @include bp(max-width small){
@@ -31,16 +34,21 @@
 .featured-post__text {
     padding-left: 1rem;
     width: 70%;
+    letter-spacing: .03em;
     
     @include bp(large){
-        width: 200px;
+        width: 70%;
     }
 
     h4 {
-        font-weight: 300;
+        font-weight: 400;
+        font-size: 1rem;
     }
 
     span {
-        color: $opacity-black;
+        color: $grey;
+        font-size: .625rem;
+        text-transform: uppercase;
+        letter-spacing: .2em;
     }
 }

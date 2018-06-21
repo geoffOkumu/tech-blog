@@ -6,7 +6,7 @@ const About = ({data}) =>{
     const aboutDetails = data.edges[0].node.frontmatter
     
     return(
-        <div style={{backgroundImage: `url(${aboutDetails.image})`}}>
+        <div>
             <div className="home-about__container">
                 <div className="container">
                     <Row>
@@ -17,9 +17,7 @@ const About = ({data}) =>{
                             </div>
                         </Col>
                         <Col lg={12} xs={24}>
-                            <div className="home-about__image">
-                                <img src={aboutDetails.image} alt="logo"/>
-                            </div>
+                            
                         </Col>
                     </Row>
                 </div>

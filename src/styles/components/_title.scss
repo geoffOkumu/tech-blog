@@ -1,0 +1,23 @@
+.section-title {
+    margin: 1rem 0;
+
+    span {
+        font-weight: 300;
+        text-transform: uppercase;
+        display: inline-block;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(1.4);
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #0087ca;
+            transform-origin: bottom left;
+            transition: transform 0.25s ease-out;
+        }
+    }
+}
