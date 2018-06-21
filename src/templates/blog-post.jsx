@@ -7,6 +7,21 @@ import { Row, Col } from '../layout-components/grid'
 import Helmet from 'react-helmet'
 import FeaturedPosts from '../components/FeaturedPosts';
 import Title from '../components/Title';
+import {
+    FacebookShareButton,
+    FacebookIcon,
+    FacebookShareCount,
+
+    TwitterIcon,
+    TwitterShareButton,
+
+    LinkedinIcon,
+    LinkedinShareButton,
+    LinkedinShareCount,
+
+    WhatsappIcon,
+    WhatsappShareButton
+} from 'react-share'
 
 class BlogPost extends React.Component{
     render(){
@@ -14,6 +29,8 @@ class BlogPost extends React.Component{
         const post = data.blogPost
         const postId = this.props.pathContext.id
         const postMeta = post.frontmatter
+        const shareUrl = typeof window !== 'undefined' ? window.location.href : `http://wwww.techgenius.me/${post.fields.slug}`
+        const title = postMeta.title
         //posts from the same category
         let relatedPosts = []
         data.relatedPosts.edges.map((post) => {
@@ -47,14 +64,76 @@ class BlogPost extends React.Component{
                 <img src={postMeta.thumbnail} alt='featured image' className='blog-post__header-img'/>
                 <Whitespace height={60}/>
                 <Row>
-                    <Col lg={6} md={24} xs={24}></Col>
+                    <Col lg={4} md={24} xs={24}>
+                        <div className="blog-post__share-buttons">
+                            <div className='blog-post__share-title'>
+                                <Title title='share'/>
+                            </div>
+                            <div>
+                                <FacebookShareButton
+                                    url={shareUrl}
+                                    quote={postMeta.title}
+                                    className="blog-post__share-btn"
+                                >
+                                    <FacebookIcon
+                                    size={48}
+                                    round />
+                                </FacebookShareButton>
+                                <FacebookShareCount
+                                    url={shareUrl}
+                                    className="blog-post__share-count">
+                                    {count => count}
+                                </FacebookShareCount>
+                            </div>
+                            <div>
+                            <TwitterShareButton
+                                url={shareUrl}
+                                title={title}
+                                className="blog-post__share-btn">
+                                <TwitterIcon
+                                size={48}
+                                round />
+                            </TwitterShareButton>
+                            </div>
+                            <div>
+                            <WhatsappShareButton
+                                url={shareUrl}
+                                title={title}
+                                separator=":: "
+                                className="blog-post__share-btn">
+                                <WhatsappIcon size={48} round />
+                            </WhatsappShareButton>
+                            </div>
+                            <div>
+                            <LinkedinShareButton
+                                url={shareUrl}
+                                title={title}
+                                windowWidth={750}
+                                windowHeight={600}
+                                className="blog-post__share-btn">
+                                <LinkedinIcon
+                                size={48}
+                                round />
+                            </LinkedinShareButton>
+                            <LinkedinShareCount
+                                url={shareUrl}
+                                className="blog-post__share-count">
+                                {count => count}
+                            </LinkedinShareCount>
+                            </div>
+                        </div>
+                    </Col>
                     <Col lg={12} md={24} xs={24}>
                         <div
                             className='blog-post__body container'
                             dangerouslySetInnerHTML={{__html: post.html}}
                         />
                     </Col>
-                    <Col lg={6} md={24} xs={24}></Col>
+                    <Col lg={8} md={24} xs={24}>
+                    <div className="blog-post__right-panel">
+                        <Title title='Join our mail list'/>
+                    </div>
+                    </Col>
                 </Row>
                 <Whitespace height={60}/>
                 <Divider />
@@ -87,6 +166,9 @@ export const blogPostQuery = graphql`
       id
       html
       timeToRead
+      fields {
+        slug
+      }
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
         title

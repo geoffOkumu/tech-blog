@@ -9,6 +9,7 @@
     "enquire.js": "^2.1.6",
     "gatsby": "^1.9.247",
     "gatsby-link": "^1.6.40",
+    "gatsby-plugin-google-analytics": "^1.0.31",
     "gatsby-plugin-netlify-cms": "^2.0.1",
     "gatsby-plugin-postcss-sass": "^1.0.22",
     "gatsby-plugin-react-helmet": "^2.0.10",
@@ -17,7 +18,8 @@
     "lodash": "^4.17.10",
     "mappy-breakpoints": "^0.2.3",
     "netlify-cms": "^1.9.2",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-share": "^2.2.0"
   },
   "keywords": [
     "gatsby"

@@ -48,3 +48,46 @@
         font-weight: 500;
     }
 }
+
+.blog-post__share-title {
+    @include bp(max-width medium){
+        margin-right: 2rem;
+    }
+}
+
+.blog-post__share-buttons {
+    margin: auto;
+    text-align: center;
+
+    @include bp(max-width medium){
+        display: flex;
+        padding: 1rem;
+    }
+}
+
+.blog-post__share-btn {
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 1rem;
+
+    &:hover {
+        opacity: .8;
+    }
+
+    @include bp(max-width medium){
+        margin-right: 1rem;
+    }
+}
+
+.blog-post__share-count {
+    margin-top: 3px;
+    text-align: center;
+}
+
+.blog-post__right-panel {
+    margin-left: 2rem;
+
+    @include bp(max-width medium){
+        margin-left: 1rem;
+    }
+}
