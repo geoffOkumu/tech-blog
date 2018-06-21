@@ -7,6 +7,7 @@ import { Row, Col } from '../layout-components/grid'
 import Helmet from 'react-helmet'
 import FeaturedPosts from '../components/FeaturedPosts';
 import Title from '../components/Title';
+import ReactDisqusComments from 'react-disqus-comments'
 import {
     FacebookShareButton,
     FacebookIcon,
@@ -24,6 +25,11 @@ import {
 } from 'react-share'
 
 class BlogPost extends React.Component{
+    handleNewComment(comment) {
+        /* eslint no-console:0 */
+        console.log(comment);
+    }
+
     render(){
         const {data} = this.props
         const post = data.blogPost
@@ -152,6 +158,16 @@ class BlogPost extends React.Component{
                     }
                 </div>
                 <Divider />
+                <Whitespace height={40}/>
+                <div className="blog-post__comments">
+                <ReactDisqusComments
+                    shortname="techgenius-1"
+                    identifier={title}
+                    title={title}
+                    url='https://techgenius.me'
+                    category_id="Tech"
+                    onNewComment={this.handleNewComment}/>
+                </div>
                 <Whitespace/>
             </div>
         )

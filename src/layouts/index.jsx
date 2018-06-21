@@ -4,6 +4,8 @@ import Helmet from 'react-helmet'
 
 import Header from '../components/header'
 import '../styles/styles.scss'
+import Whitespace from '../layout-components/whitespace';
+import Divider from '../layout-components/divider';
 
 const Layout = ({ children, data, location }) => (
   <div>
@@ -11,12 +13,18 @@ const Layout = ({ children, data, location }) => (
       title={data.site.siteMetadata.title}
       meta={[
         { name: 'description', content: 'TechGenius we geek about technology, software, cars' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'keywords', content: 'Technology, smartphones, cars, tech reviews' },
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} location={location} />
     <div>
       {children()}
+    </div>
+    <div className="container">
+      <Whitespace height={60}/>
+      <Divider />
+      <p>&copy; Copyright 2018</p>
+      <Whitespace height={20}/>
     </div>
   </div>
 )

@@ -85,9 +85,15 @@
 }
 
 .blog-post__right-panel {
-    margin-left: 2rem;
+    margin-left: 3rem;
 
     @include bp(max-width medium){
         margin-left: 1rem;
     }
+}
+
+.blog-post__comments {
+    margin: auto;
+    max-width: 960px;
+    padding: 0 1rem;
 }
