@@ -11,7 +11,7 @@ const AllPosts = ({data}) =>{
                     <Col lg={12} xs={24} key={post.node.id}>
                         <div className="post-item__container">
                             <img src={post.node.frontmatter.thumbnail} alt="featured image" className="post-item__image"/>
-                            <Link to='/'>
+                            <Link to={post.node.fields.slug}>
                                 <h2 className="post-item__title">{post.node.frontmatter.title}</h2>
                             </Link>
                             <div className="post-item__meta">

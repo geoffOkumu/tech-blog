@@ -29,7 +29,7 @@ $breakpoints: (
 
 // Import Fonts
 // -------------------------
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Roboto+Mono');
 
 // Type
 // -------------------------
@@ -38,7 +38,7 @@ $base-line-height   : 1.5;
 $base-font-color    : $black;
 $scale              : 1.333;
 $leading            : $base-line-height * 1rem;
-$sans-serif         : 'Raleway', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+$sans-serif         : 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
 $serif              : 'Playfair Display', 'Georgia', 'serif';
 $mono               : 'Roboto Mono', Monaco, monospace !default;
 $base-font-family   : $mono;

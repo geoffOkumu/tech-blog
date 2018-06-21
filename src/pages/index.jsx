@@ -25,6 +25,7 @@ const IndexPage = ({data}) =>{
 
   return(
     <div>
+      <Whitespace/>
       <div>
         <FeaturedPosts posts={featuredPosts}/>
       </div>
@@ -72,6 +73,9 @@ export const query = graphql`
         node {
           id
           excerpt
+          fields {
+            slug
+          }
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
@@ -93,6 +97,9 @@ export const query = graphql`
       edges {
         node {
           id
+          fields {
+            slug
+          }
           frontmatter {
             title
             date

@@ -8,7 +8,7 @@ const FeaturedPosts = ({posts}) =>{
             {
                 posts.map((post)=>
                 <Col lg={8} md={24} key={post.node.id}>
-                    <Link to='/'>
+                    <Link to={post.node.fields.slug}>
                         <div className="featured-post__container">
                             <div className='featured-post__img'>
                                 <img src={post.node.frontmatter.thumbnail} alt="featured image"/>

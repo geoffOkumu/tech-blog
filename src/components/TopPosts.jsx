@@ -12,7 +12,7 @@ const TopPosts = ({data}) =>{
                         <div className="top-post__category">
                             <span>{post.node.frontmatter.category}</span>
                         </div>
-                        <Link to='/'>
+                        <Link to={post.node.fields.slug}>
                             <h1 className="top-post__title">{post.node.frontmatter.title}</h1>
                         </Link>
                         <span className="top-post__meta">By <Link to={`/authors`}>{post.node.frontmatter.author}</Link> on {post.node.frontmatter.date}</span>

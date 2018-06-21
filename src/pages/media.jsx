@@ -4,8 +4,8 @@ import Whitespace from '../layout-components/whitespace'
 const MediaPage = () =>{
     return(
         <div className="container">
-            <Whitespace/>
-            <h1>Media</h1>
+            <Whitespace height={160}/>
+            <h1>Youtube channel comming soon</h1>
         </div>
     )
 }

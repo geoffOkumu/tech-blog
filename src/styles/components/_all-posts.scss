@@ -81,3 +81,15 @@
         padding-left: 0;
     }
 }
+
+.category-page__header {
+    height: 200px;
+
+    h1 {
+        color: $white;
+        text-transform: capitalize;
+        padding-top: 80px;
+        font-weight: 700;
+        font-size: 3rem;
+    }
+}
