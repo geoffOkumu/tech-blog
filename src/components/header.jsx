@@ -28,13 +28,13 @@ class Header extends React.Component{
                     <Link to='/categories' style={active('/categories')}>Categories</Link>
                   </li>
                   <li>
-                    <Link to='/media'>Media</Link>
+                    <Link to='/media' style={active('/media')}>Media</Link>
                   </li>
                   <li>
-                    <Link to='/about'>About</Link>
+                    <Link to='/about' style={active('/about')}>About</Link>
                   </li>
                   <li>
-                    <Link to='/contact'>Contact</Link>
+                    <Link to='/contact' style={active('/contact')}>Contact</Link>
                   </li>
                 </ul>
               </nav>

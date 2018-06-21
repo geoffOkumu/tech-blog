@@ -1,0 +1,56 @@
+.about-page__header {
+    background-color: $opacity-white;
+    height: 300px;
+
+    h1 {
+        font-weight: 300;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.about-page__copy {
+    padding-top: 2rem;
+    max-width: 90%;
+
+    @include bp(large){
+        max-width: 100%;
+        text-align: right;
+    }
+}
+
+.about-profile__container {
+    display: flex;
+
+    align-items: center;
+}
+
+.about-page__profile {
+    margin-left: 2rem;
+}
+
+.about-page__image {
+    width: 200px;
+    height: 200px;
+    text-align: right;
+
+    img {
+        object-fit: cover;
+        border-radius: 200px;
+        margin: auto;
+    }
+}
+
+.contact-page__contacts-container {
+    padding-top: 1.8rem;
+
+    h2 {
+        padding-bottom: 0;
+    }
+
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

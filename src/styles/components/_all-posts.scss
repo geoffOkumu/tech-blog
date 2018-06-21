@@ -73,3 +73,11 @@
         background-color: $primary-low;
     }
 }
+
+.side-panel {
+    padding-left: 2rem;
+
+    @include bp(max-width medium){
+        padding-left: 0;
+    }
+}

@@ -1,0 +1,57 @@
+.categories__title {
+    font-weight: 300;
+}
+
+.category-item__container {
+    background-color: $grey;
+
+    @include bp(large){
+        margin-bottom: 2rem;
+    }
+    
+    @include bp(max-width small){
+        margin-bottom: 1rem;
+    }
+
+    @include bp(small){
+        margin-bottom: 1rem;
+    }
+}
+
+.category-item__title {
+    padding: 2rem;
+    
+    h3 {
+        font-size: 2rem;
+        font-weight: 300;
+        text-transform: capitalize;
+        margin-top: .5rem;
+    }
+}
+
+.category-item__link{
+    text-align: center;
+    padding: 2rem;
+    color: $white;
+    background-color: $primary;
+    transition: .25s ease;
+
+    &:hover {
+        background-color: $primary-low;
+    }
+
+    &:hover img {
+        margin-right: 5px;
+    }
+
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    span {
+        display: block;
+        color: $white;
+    }
+}

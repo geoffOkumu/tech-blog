@@ -3,11 +3,11 @@ import Link from 'gatsby-link'
 import FeaturedPosts from '../components/FeaturedPosts';
 import About from '../components/About';
 import TopPosts from '../components/TopPosts';
-import Divider from '../layout-components/divider'
 import { Row, Col } from '../layout-components/grid';
 import AllPosts from '../components/AllPosts';
 import Title from '../components/Title';
 import Whitespace from '../layout-components/whitespace'
+import SocialIcons from '../components/social-icons'
 
 const IndexPage = ({data}) =>{
   const allPosts = data.blogposts.edges
@@ -42,9 +42,19 @@ const IndexPage = ({data}) =>{
             <Title title='All Posts'/>
             <AllPosts data={allPosts}/>
           </Col>
-          <Col lg={8} xs={24}></Col>
+          <Col lg={8} xs={24}>
+            <Whitespace height ={16}/>
+            <div className="side-panel">
+              <Title title='Join our Maillist'/>
+              <Whitespace height={20}/>
+              <Title title='Social'/>
+              <Whitespace height={10}/>
+              <SocialIcons/>
+            </div>
+          </Col>
         </Row>
       </div>
+      <Whitespace/>
     </div>
   )
 }
